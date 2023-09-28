@@ -68,14 +68,24 @@ pub fn check_db_exists(path: &Path) -> bool {
     db_file.exists()
 }
 
+pub fn open_db_read_only_with_existing_cf(path: &Path) -> Result<Arc<RwLock<DB>>, rocksdb::Error> {
+    let existing_column_families = existing_column_famililes(path)?;
+    let db = DB::open_cf_for_read_only(&db_options(), path, existing_column_families, false)?;
+    Ok(Arc::new(RwLock::new(db)))
+}
+
 pub fn open_db_with_existing_cf(path: &Path) -> Result<Arc<RwLock<DB>>, rocksdb::Error> {
-    let existing_column_families = if check_db_exists(path) {
-        DB::list_cf(&db_options(), path)?
-    } else {
-        vec![]
-    };
+    let existing_column_families = existing_column_famililes(path)?;
     let db = DB::open_cf(&db_options(), path, existing_column_families)?;
     Ok(Arc::new(RwLock::new(db)))
+}
+
+fn existing_column_famililes(path: &Path) -> Result<Vec<String>, rocksdb::Error> {
+    if check_db_exists(path) {
+        DB::list_cf(&db_options(), path)
+    } else {
+        Ok(vec![])
+    }
 }
 
 pub fn db_write_options() -> WriteOptions {
