@@ -12,7 +12,9 @@ use rocksdb::DB;
 use schemars::_serde_json::Value;
 
 use crate::common::operation_error::{OperationError, OperationResult};
-use crate::common::rocksdb_wrapper::open_db_with_existing_cf;
+use crate::common::rocksdb_wrapper::{
+    open_db_read_only_with_existing_cf, open_db_with_existing_cf,
+};
 use crate::common::utils::IndexesMap;
 use crate::common::Flusher;
 use crate::id_tracker::IdTrackerSS;
@@ -52,6 +54,12 @@ pub struct StructPayloadIndex {
     /// Used to select unique point ids
     visited_pool: VisitedPool,
     db: Arc<RwLock<DB>>,
+}
+
+enum OpenType {
+    ReadWrite,
+    Appendable,
+    ReadOnly,
 }
 
 impl StructPayloadIndex {
@@ -139,6 +147,32 @@ impl StructPayloadIndex {
         path: &Path,
         is_appendable: bool,
     ) -> OperationResult<Self> {
+        Self::_open(
+            payload,
+            id_tracker,
+            path,
+            if is_appendable {
+                OpenType::Appendable
+            } else {
+                OpenType::ReadWrite
+            },
+        )
+    }
+
+    pub fn open_read_only(
+        payload: Arc<AtomicRefCell<PayloadStorageEnum>>,
+        id_tracker: Arc<AtomicRefCell<IdTrackerSS>>,
+        path: &Path,
+    ) -> OperationResult<Self> {
+        Self::_open(payload, id_tracker, path, OpenType::ReadOnly)
+    }
+
+    fn _open(
+        payload: Arc<AtomicRefCell<PayloadStorageEnum>>,
+        id_tracker: Arc<AtomicRefCell<IdTrackerSS>>,
+        path: &Path,
+        open_type: OpenType,
+    ) -> OperationResult<Self> {
         create_dir_all(path)?;
         let config_path = PayloadConfig::get_config_path(path);
         let config = if config_path.exists() {
@@ -147,8 +181,13 @@ impl StructPayloadIndex {
             PayloadConfig::default()
         };
 
-        let db = open_db_with_existing_cf(path)
-            .map_err(|err| OperationError::service_error(format!("RocksDB open error: {err}")))?;
+        let is_read_only = matches!(open_type, OpenType::ReadOnly);
+        let db = if is_read_only {
+            open_db_read_only_with_existing_cf(path)
+        } else {
+            open_db_with_existing_cf(path)
+        }
+        .map_err(|err| OperationError::service_error(format!("RocksDB open error: {err}")))?;
 
         let mut index = StructPayloadIndex {
             payload,
@@ -160,12 +199,12 @@ impl StructPayloadIndex {
             db,
         };
 
-        if !index.config_path().exists() {
+        if !is_read_only && !index.config_path().exists() {
             // Save default config
             index.save_config()?;
         }
 
-        index.load_all_fields(is_appendable)?;
+        index.load_all_fields(matches!(open_type, OpenType::Appendable))?;
 
         Ok(index)
     }
