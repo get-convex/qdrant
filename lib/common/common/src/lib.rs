@@ -1,4 +1,3 @@
-#![feature(precise_pointer_size_matching)]
 pub mod cpu;
 pub mod defaults;
 pub mod fixed_length_priority_queue;
