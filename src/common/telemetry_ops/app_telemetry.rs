@@ -1,7 +1,7 @@
 use std::path::Path;
 
 use chrono::{DateTime, SubsecRound, Utc};
-use common::types::{DetailsLevel, TelemetryDetail};
+use qdrant_common::types::{DetailsLevel, TelemetryDetail};
 use schemars::JsonSchema;
 use segment::common::anonymize::Anonymize;
 use serde::Serialize;

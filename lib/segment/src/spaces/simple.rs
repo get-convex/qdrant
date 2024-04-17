@@ -1,4 +1,4 @@
-use common::types::ScoreType;
+use qdrant_common::types::ScoreType;
 
 use super::metric::Metric;
 #[cfg(target_arch = "x86_64")]

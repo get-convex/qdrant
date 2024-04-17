@@ -2,8 +2,8 @@ use std::path::PathBuf;
 use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
-use common::cpu::CpuPermit;
-use common::types::{PointOffsetType, ScoredPointOffset, TelemetryDetail};
+use qdrant_common::cpu::CpuPermit;
+use qdrant_common::types::{PointOffsetType, ScoredPointOffset, TelemetryDetail};
 use sparse::index::inverted_index::inverted_index_mmap::InvertedIndexMmap;
 use sparse::index::inverted_index::inverted_index_ram::InvertedIndexRam;
 

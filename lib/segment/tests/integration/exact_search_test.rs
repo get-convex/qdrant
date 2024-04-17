@@ -2,9 +2,9 @@ use std::collections::HashMap;
 use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
-use common::cpu::CpuPermit;
-use common::types::PointOffsetType;
 use itertools::Itertools;
+use qdrant_common::cpu::CpuPermit;
+use qdrant_common::types::PointOffsetType;
 use rand::{thread_rng, Rng};
 use segment::data_types::vectors::{only_default_vector, DEFAULT_VECTOR_NAME};
 use segment::entry::entry_point::SegmentEntry;

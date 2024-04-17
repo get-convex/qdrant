@@ -3,8 +3,8 @@ use std::ops::Bound;
 use std::ops::Bound::{Excluded, Unbounded};
 use std::sync::Arc;
 
-use common::types::PointOffsetType;
 use parking_lot::RwLock;
+use qdrant_common::types::PointOffsetType;
 use rocksdb::DB;
 
 use super::mutable_numeric_index::MutableNumericIndex;

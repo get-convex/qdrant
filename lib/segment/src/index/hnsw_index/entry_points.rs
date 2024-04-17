@@ -1,7 +1,7 @@
 use std::cmp::Ordering;
 
-use common::fixed_length_priority_queue::FixedLengthPriorityQueue;
-use common::types::PointOffsetType;
+use qdrant_common::fixed_length_priority_queue::FixedLengthPriorityQueue;
+use qdrant_common::types::PointOffsetType;
 use serde::{Deserialize, Serialize};
 
 #[derive(Deserialize, Serialize, Clone, Debug, PartialEq)]

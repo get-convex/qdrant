@@ -6,10 +6,10 @@ mod wal_recovery_test;
 use std::sync::Arc;
 use std::time::Duration;
 
-use common::cpu::CpuBudget;
 use futures::future::join_all;
 use itertools::Itertools;
 use parking_lot::{Mutex, RwLock};
+use qdrant_common::cpu::CpuBudget;
 use segment::index::hnsw_index::num_rayon_threads;
 use tempfile::Builder;
 use tokio::time::{sleep, Instant};
@@ -68,7 +68,7 @@ async fn test_optimization_process() {
     // expect the amount that would fit within our CPU budget
     // We skip optimizations that use less than half of the preferred CPU budget
     let expected_optimization_count = {
-        let cpus = common::cpu::get_cpu_budget(0);
+        let cpus = qdrant_common::cpu::get_cpu_budget(0);
         let hnsw_threads = num_rayon_threads(0);
         (cpus / hnsw_threads + ((cpus % hnsw_threads) >= hnsw_threads.div_ceil(2)) as usize)
             .clamp(1, total_optimizations)
@@ -176,7 +176,7 @@ async fn test_cancel_optimization() {
     {
         // We skip optimizations that use less than half of the preferred CPU budget
         let expected_optimization_count = {
-            let cpus = common::cpu::get_cpu_budget(0);
+            let cpus = qdrant_common::cpu::get_cpu_budget(0);
             let hnsw_threads = num_rayon_threads(0);
             (cpus / hnsw_threads + ((cpus % hnsw_threads) >= hnsw_threads.div_ceil(2)) as usize)
                 .clamp(1, 3)

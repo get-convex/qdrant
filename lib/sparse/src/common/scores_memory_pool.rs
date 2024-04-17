@@ -1,6 +1,6 @@
-use common::defaults::POOL_KEEP_LIMIT;
-use common::types::ScoreType;
 use parking_lot::Mutex;
+use qdrant_common::defaults::POOL_KEEP_LIMIT;
+use qdrant_common::types::ScoreType;
 
 type PooledScores = Vec<ScoreType>;
 

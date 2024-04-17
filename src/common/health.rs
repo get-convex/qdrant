@@ -10,9 +10,9 @@ use api::grpc::qdrant::{GetConsensusCommitRequest, GetConsensusCommitResponse};
 use api::grpc::transport_channel_pool::{self, TransportChannelPool};
 use collection::shards::shard::ShardId;
 use collection::shards::CollectionId;
-use common::defaults;
 use futures::stream::FuturesUnordered;
 use futures::{FutureExt as _, StreamExt as _, TryStreamExt as _};
+use qdrant_common::defaults;
 use storage::content_manager::consensus_manager::ConsensusStateRef;
 use storage::content_manager::toc::TableOfContent;
 use tokio::{runtime, sync, time};
@@ -114,7 +114,7 @@ pub struct Task {
 impl Task {
     pub async fn exec(mut self) {
         while let Err(err) = self.exec_catch_unwind().await {
-            let message = common::panic::downcast_str(&err).unwrap_or("");
+            let message = qdrant_common::panic::downcast_str(&err).unwrap_or("");
             let separator = if !message.is_empty() { ": " } else { "" };
 
             log::error!("HealthChecker task panicked, retrying{separator}{message}",);

@@ -2,9 +2,9 @@ use std::collections::HashMap;
 use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
-use common::cpu::CpuPermit;
-use common::types::{PointOffsetType, TelemetryDetail};
 use itertools::Itertools;
+use qdrant_common::cpu::CpuPermit;
+use qdrant_common::types::{PointOffsetType, TelemetryDetail};
 use rand::prelude::StdRng;
 use rand::{Rng, SeedableRng};
 use rstest::rstest;

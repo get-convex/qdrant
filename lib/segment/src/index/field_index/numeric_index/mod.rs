@@ -11,9 +11,9 @@ use std::str::FromStr;
 use std::sync::Arc;
 
 use chrono::DateTime;
-use common::types::PointOffsetType;
 use mutable_numeric_index::MutableNumericIndex;
 use parking_lot::RwLock;
+use qdrant_common::types::PointOffsetType;
 use rocksdb::DB;
 use serde_json::Value;
 

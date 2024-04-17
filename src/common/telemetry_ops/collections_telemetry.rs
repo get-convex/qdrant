@@ -1,7 +1,7 @@
 use collection::config::CollectionParams;
 use collection::operations::types::OptimizersStatus;
 use collection::telemetry::CollectionTelemetry;
-use common::types::{DetailsLevel, TelemetryDetail};
+use qdrant_common::types::{DetailsLevel, TelemetryDetail};
 use schemars::JsonSchema;
 use segment::common::anonymize::Anonymize;
 use serde::Serialize;

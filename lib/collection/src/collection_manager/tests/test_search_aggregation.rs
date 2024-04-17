@@ -1,4 +1,4 @@
-use common::types::ScoreType;
+use qdrant_common::types::ScoreType;
 use segment::types::{PointIdType, ScoredPoint, SeqNumberType};
 
 use crate::collection_manager::segments_searcher::SegmentsSearcher;

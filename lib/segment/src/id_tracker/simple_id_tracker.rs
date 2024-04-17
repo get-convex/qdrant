@@ -3,8 +3,8 @@ use std::sync::Arc;
 
 use bincode;
 use bitvec::prelude::{BitSlice, BitVec};
-use common::types::PointOffsetType;
 use parking_lot::RwLock;
+use qdrant_common::types::PointOffsetType;
 use rocksdb::DB;
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;

@@ -1,8 +1,8 @@
 use std::collections::HashMap;
 use std::sync::Arc;
 
-use common::types::PointOffsetType;
 use parking_lot::RwLock;
+use qdrant_common::types::PointOffsetType;
 use rocksdb::DB;
 
 use crate::common::operation_error::{OperationError, OperationResult};

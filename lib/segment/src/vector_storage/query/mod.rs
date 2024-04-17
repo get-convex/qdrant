@@ -1,4 +1,4 @@
-use common::types::ScoreType;
+use qdrant_common::types::ScoreType;
 
 use crate::common::operation_error::{OperationError, OperationResult};
 use crate::data_types::vectors::DenseVector;

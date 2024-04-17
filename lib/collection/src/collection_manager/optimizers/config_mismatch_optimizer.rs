@@ -265,8 +265,8 @@ mod tests {
     use std::collections::BTreeMap;
     use std::sync::Arc;
 
-    use common::cpu::CpuPermit;
     use parking_lot::RwLock;
+    use qdrant_common::cpu::CpuPermit;
     use segment::entry::entry_point::SegmentEntry;
     use segment::index::hnsw_index::num_rayon_threads;
     use segment::types::{

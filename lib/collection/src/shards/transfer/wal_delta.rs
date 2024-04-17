@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
-use common::defaults;
 use parking_lot::Mutex;
+use qdrant_common::defaults;
 
 use super::transfer_tasks_pool::TransferTaskProgress;
 use super::{ShardTransfer, ShardTransferConsensus};

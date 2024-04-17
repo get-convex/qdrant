@@ -5,9 +5,9 @@ use std::sync::Arc;
 
 use atomic_refcell::AtomicRefCell;
 use bitvec::prelude::{BitSlice, BitVec};
-use common::types::PointOffsetType;
 use log::debug;
 use parking_lot::RwLock;
+use qdrant_common::types::PointOffsetType;
 use rocksdb::DB;
 use serde::{Deserialize, Serialize};
 

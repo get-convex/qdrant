@@ -12,10 +12,10 @@ use api::grpc::qdrant::{AllPeers, PeerId as GrpcPeerId, RaftMessage as GrpcRaftM
 use api::grpc::transport_channel_pool::TransportChannelPool;
 use collection::shards::channel_service::ChannelService;
 use collection::shards::shard::PeerId;
-#[cfg(target_os = "linux")]
-use common::cpu::linux_high_thread_priority;
-use common::defaults;
 use prost::Message as _;
+#[cfg(target_os = "linux")]
+use qdrant_common::cpu::linux_high_thread_priority;
+use qdrant_common::defaults;
 use raft::eraftpb::Message as RaftMessage;
 use raft::prelude::*;
 use raft::{SoftState, StateRole, INVALID_ID};
@@ -1140,7 +1140,7 @@ mod tests {
 
     use collection::operations::types::VectorParams;
     use collection::shards::channel_service::ChannelService;
-    use common::cpu::CpuBudget;
+    use qdrant_common::cpu::CpuBudget;
     use segment::types::Distance;
     use slog::Drain;
     use storage::content_manager::collection_meta_ops::{

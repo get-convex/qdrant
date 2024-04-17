@@ -13,8 +13,8 @@ use api::grpc::qdrant::update_collection_cluster_setup_request::{
     Operation as ClusterOperationsPb, Operation,
 };
 use api::grpc::qdrant::{CreateShardKey, SearchPoints};
-use common::types::ScoreType;
 use itertools::Itertools;
+use qdrant_common::types::ScoreType;
 use segment::data_types::order_by::{OrderBy, StartFrom};
 use segment::data_types::vectors::{
     BatchVectorStruct, Named, NamedQuery, Vector, VectorStruct, DEFAULT_VECTOR_NAME,

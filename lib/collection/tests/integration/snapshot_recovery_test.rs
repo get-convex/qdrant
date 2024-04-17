@@ -13,7 +13,7 @@ use collection::operations::CollectionUpdateOperations;
 use collection::shards::channel_service::ChannelService;
 use collection::shards::collection_shard_distribution::CollectionShardDistribution;
 use collection::shards::replica_set::ReplicaState;
-use common::cpu::CpuBudget;
+use qdrant_common::cpu::CpuBudget;
 use segment::data_types::vectors::VectorStruct;
 use segment::types::{Distance, WithPayloadInterface, WithVector};
 use tempfile::Builder;

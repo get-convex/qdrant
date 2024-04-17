@@ -1,8 +1,8 @@
 use std::collections::{BTreeSet, HashSet};
 use std::sync::Arc;
 
-use common::types::PointOffsetType;
 use parking_lot::RwLock;
+use qdrant_common::types::PointOffsetType;
 use rocksdb::DB;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;

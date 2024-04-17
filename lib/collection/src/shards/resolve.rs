@@ -246,7 +246,7 @@ impl<'a, T> ResolverRecord<'a, T> {
 mod test {
     use std::fmt;
 
-    use common::types::ScoreType;
+    use qdrant_common::types::ScoreType;
 
     use super::*;
 

@@ -76,7 +76,7 @@ pub struct ScoredPoint {
     /// Point version
     pub version: segment::types::SeqNumberType,
     /// Points vector distance to the query vector
-    pub score: common::types::ScoreType,
+    pub score: qdrant_common::types::ScoreType,
     /// Payload - values assigned to the point
     pub payload: Option<segment::types::Payload>,
     /// Vector of the point

@@ -4,11 +4,11 @@ use std::path::PathBuf;
 use std::sync::atomic::AtomicU64;
 use std::sync::Arc;
 
-use common::cpu::CpuBudget;
-use common::panic;
 use itertools::Itertools;
 use log::{debug, error, info, trace, warn};
 use parking_lot::Mutex;
+use qdrant_common::cpu::CpuBudget;
+use qdrant_common::panic;
 use segment::common::operation_error::OperationResult;
 use segment::index::hnsw_index::num_rayon_threads;
 use segment::types::SeqNumberType;

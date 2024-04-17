@@ -281,7 +281,7 @@ impl Settings {
 pub fn max_web_workers(settings: &Settings) -> usize {
     match settings.service.max_workers {
         Some(0) => {
-            let num_cpu = common::cpu::get_num_cpus();
+            let num_cpu = qdrant_common::cpu::get_num_cpus();
             std::cmp::max(1, num_cpu - 1)
         }
         Some(max_workers) => max_workers,

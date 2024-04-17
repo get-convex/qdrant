@@ -1,4 +1,4 @@
-use common::types::ScoreType;
+use qdrant_common::types::ScoreType;
 
 use crate::data_types::vectors::{DenseVector, VectorElementType};
 use crate::types::Distance;

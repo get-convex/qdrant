@@ -7,13 +7,13 @@ use std::ops::Deref;
 use std::rc::Rc;
 use std::str::FromStr;
 
-use common::types::ScoreType;
 use fnv::FnvBuildHasher;
 use geo::prelude::HaversineDistance;
 use geo::{Contains, Coord, LineString, Point, Polygon};
 use indexmap::IndexSet;
 use itertools::Itertools;
 use ordered_float::OrderedFloat;
+use qdrant_common::types::ScoreType;
 use schemars::JsonSchema;
 use serde::{Deserialize, Deserializer, Serialize};
 use serde_json::{Map, Value};

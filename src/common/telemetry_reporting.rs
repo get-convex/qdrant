@@ -1,7 +1,7 @@
 use std::sync::Arc;
 use std::time::Duration;
 
-use common::types::{DetailsLevel, TelemetryDetail};
+use qdrant_common::types::{DetailsLevel, TelemetryDetail};
 use segment::common::anonymize::Anonymize;
 use tokio::sync::Mutex;
 

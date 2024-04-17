@@ -1,8 +1,8 @@
 use std::sync::atomic::{AtomicBool, Ordering};
 
 use bitvec::prelude::BitSlice;
-use common::fixed_length_priority_queue::FixedLengthPriorityQueue;
-use common::types::{PointOffsetType, ScoreType, ScoredPointOffset};
+use qdrant_common::fixed_length_priority_queue::FixedLengthPriorityQueue;
+use qdrant_common::types::{PointOffsetType, ScoreType, ScoredPointOffset};
 
 use super::query::context_query::ContextQuery;
 use super::query::discovery_query::DiscoveryQuery;

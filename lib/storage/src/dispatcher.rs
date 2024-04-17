@@ -4,7 +4,7 @@ use std::sync::Arc;
 use std::time::{Duration, Instant};
 
 use collection::config::ShardingMethod;
-use common::defaults::CONSENSUS_META_OP_WAIT;
+use qdrant_common::defaults::CONSENSUS_META_OP_WAIT;
 
 use crate::content_manager::collection_meta_ops::AliasOperations;
 use crate::content_manager::shard_distribution::ShardDistributionProposal;

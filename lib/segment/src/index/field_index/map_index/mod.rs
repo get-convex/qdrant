@@ -6,12 +6,12 @@ use std::hash::{BuildHasher, Hash};
 use std::str::FromStr;
 use std::sync::Arc;
 
-use common::types::PointOffsetType;
 use immutable_map_index::ImmutableMapIndex;
 use indexmap::IndexSet;
 use itertools::Itertools;
 use mutable_map_index::MutableMapIndex;
 use parking_lot::RwLock;
+use qdrant_common::types::PointOffsetType;
 use rocksdb::DB;
 use serde_json::Value;
 use smol_str::SmolStr;

@@ -1,6 +1,6 @@
 use std::collections::{BTreeSet, HashMap};
 
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 use serde::{Deserialize, Serialize};
 
 use super::posting_list::{CompressedPostingList, PostingList};

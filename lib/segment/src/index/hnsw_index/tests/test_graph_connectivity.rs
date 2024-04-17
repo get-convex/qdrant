@@ -2,8 +2,8 @@ use std::collections::HashMap;
 use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
-use common::cpu::CpuPermit;
-use common::types::PointOffsetType;
+use qdrant_common::cpu::CpuPermit;
+use qdrant_common::types::PointOffsetType;
 use rand::thread_rng;
 use tempfile::Builder;
 

@@ -1,8 +1,8 @@
 use std::iter;
 
-use common::math::scaled_fast_sigmoid;
-use common::types::ScoreType;
 use itertools::Itertools;
+use qdrant_common::math::scaled_fast_sigmoid;
+use qdrant_common::types::ScoreType;
 
 use super::context_query::ContextPair;
 use super::{Query, TransformInto};
@@ -84,9 +84,9 @@ impl From<DiscoveryQuery<Vector>> for QueryVector {
 mod test {
     use std::cmp::Ordering;
 
-    use common::types::ScoreType;
     use itertools::Itertools;
     use proptest::prelude::*;
+    use qdrant_common::types::ScoreType;
     use rstest::rstest;
 
     use super::*;

@@ -4,7 +4,7 @@ use std::path::{Path, PathBuf};
 use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
-use common::cpu::CpuPermit;
+use qdrant_common::cpu::CpuPermit;
 
 use super::get_vector_storage_path;
 use crate::common::error_logging::LogError;

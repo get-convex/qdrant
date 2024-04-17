@@ -70,7 +70,7 @@ is_sorted = "0.1.1"
 sysinfo = "0.30"
 charabia = { version = "0.8.7", default-features = false, features = ["greek", "hebrew", "thai"] }
 
-common = { path = "../common/common" }
+qdrant_common = { path = "../common/common" }
 io = { path = "../common/io" }
 memory = { path = "../common/memory" }
 sparse = { path = "../sparse" }

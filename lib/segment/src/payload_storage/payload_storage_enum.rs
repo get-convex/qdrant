@@ -1,4 +1,4 @@
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 use serde_json::Value;
 
 use crate::common::operation_error::OperationResult;

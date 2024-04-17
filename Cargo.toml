@@ -90,7 +90,7 @@ slog-stdlog = "4.1.1"
 prost = { workspace = true }
 raft-proto = { version = "0.7.0", features = ["prost-codec"], default-features = false }
 
-common = { path = "lib/common/common" }
+qdrant_common = { path = "lib/common/common" }
 cancel = { path = "lib/common/cancel" }
 memory = { path = "lib/common/memory" }
 issues = { path = "lib/common/issues" }

@@ -21,7 +21,7 @@ pub fn create_search_runtime(max_search_threads: usize) -> io::Result<Runtime> {
     let mut search_threads = max_search_threads;
 
     if search_threads == 0 {
-        let num_cpu = common::cpu::get_num_cpus();
+        let num_cpu = qdrant_common::cpu::get_num_cpus();
         // At least one thread, but not more than number of CPUs - 1 if there are more than 2 CPU
         // Example:
         // Num CPU = 1 -> 1 thread
@@ -71,7 +71,7 @@ pub fn create_general_purpose_runtime() -> io::Result<Runtime> {
     runtime::Builder::new_multi_thread()
         .enable_time()
         .enable_io()
-        .worker_threads(max(common::cpu::get_num_cpus(), 2))
+        .worker_threads(max(qdrant_common::cpu::get_num_cpus(), 2))
         .thread_name_fn(|| {
             static ATOMIC_ID: AtomicUsize = AtomicUsize::new(0);
             let general_id = ATOMIC_ID.fetch_add(1, Ordering::SeqCst);

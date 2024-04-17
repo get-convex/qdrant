@@ -2,7 +2,6 @@ use std::mem::size_of;
 use std::path::{Path, PathBuf};
 use std::sync::Arc;
 
-use common::types::PointOffsetType;
 use io::file_operations::{atomic_save_json, read_json};
 use memmap2::{Mmap, MmapMut};
 use memory::madvise;
@@ -10,6 +9,7 @@ use memory::mmap_ops::{
     create_and_ensure_length, open_read_mmap, open_write_mmap, transmute_from_u8,
     transmute_from_u8_to_slice, transmute_to_u8, transmute_to_u8_slice,
 };
+use qdrant_common::types::PointOffsetType;
 use serde::{Deserialize, Serialize};
 
 use crate::common::sparse_vector::SparseVector;

@@ -1,7 +1,7 @@
 use std::cmp::max;
 use std::path::{Path, PathBuf};
 
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 
 use super::inverted_index_mmap::InvertedIndexMmap;
 use crate::common::sparse_vector::SparseVector;

@@ -1,5 +1,5 @@
 mod collection_container;
-use common::types::TelemetryDetail;
+use qdrant_common::types::TelemetryDetail;
 mod collection_meta_ops;
 mod create_collection;
 mod locks;
@@ -28,9 +28,9 @@ use collection::shards::replica_set;
 use collection::shards::replica_set::{AbortShardTransfer, ReplicaState};
 use collection::shards::shard::{PeerId, ShardId};
 use collection::telemetry::CollectionTelemetry;
-use common::cpu::{get_num_cpus, CpuBudget};
 use futures::future::try_join_all;
 use futures::Future;
+use qdrant_common::cpu::{get_num_cpus, CpuBudget};
 use tokio::runtime::Runtime;
 use tokio::sync::{Mutex, RwLock, RwLockReadGuard, Semaphore};
 use tonic::codegen::InterceptedService;

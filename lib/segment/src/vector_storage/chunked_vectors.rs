@@ -5,7 +5,7 @@ use std::io::{Read, Write};
 use std::mem;
 use std::path::Path;
 
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 
 use crate::common::vector_utils::{TrySetCapacity, TrySetCapacityExact};
 

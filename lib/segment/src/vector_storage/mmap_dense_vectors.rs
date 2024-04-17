@@ -5,10 +5,10 @@ use std::path::Path;
 use std::sync::Arc;
 
 use bitvec::prelude::BitSlice;
-use common::types::PointOffsetType;
 use memmap2::Mmap;
 use memory::mmap_ops;
 use parking_lot::Mutex;
+use qdrant_common::types::PointOffsetType;
 
 use crate::common::error_logging::LogError;
 use crate::common::mmap_type::MmapBitSlice;

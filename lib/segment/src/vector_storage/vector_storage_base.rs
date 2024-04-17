@@ -3,7 +3,7 @@ use std::path::PathBuf;
 use std::sync::atomic::AtomicBool;
 
 use bitvec::prelude::BitSlice;
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 use sparse::common::sparse_vector::SparseVector;
 
 use super::memmap_dense_vector_storage::MemmapDenseVectorStorage;

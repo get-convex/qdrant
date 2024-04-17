@@ -1,7 +1,7 @@
 use std::borrow::Cow;
 use std::collections::HashMap;
 
-use common::validation::{validate_move_shard_different_peers, validate_range_generic};
+use qdrant_common::validation::{validate_move_shard_different_peers, validate_range_generic};
 use validator::{Validate, ValidationError, ValidationErrors};
 
 use super::qdrant as grpc;

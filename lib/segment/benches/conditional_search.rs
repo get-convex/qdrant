@@ -1,9 +1,9 @@
 #[cfg(not(target_os = "windows"))]
 mod prof;
 
-use common::types::PointOffsetType;
 use criterion::{criterion_group, criterion_main, Criterion};
 use itertools::Itertools;
+use qdrant_common::types::PointOffsetType;
 use rand::rngs::StdRng;
 use rand::{Rng, SeedableRng};
 use segment::fixtures::payload_context_fixture::{

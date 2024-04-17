@@ -1,5 +1,5 @@
 use bitvec::prelude::BitSlice;
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 use rand::rngs::StdRng;
 use rand::{Rng, SeedableRng};
 

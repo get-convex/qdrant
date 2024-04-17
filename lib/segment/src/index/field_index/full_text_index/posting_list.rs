@@ -1,5 +1,5 @@
 use bitpacking::BitPacker;
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 
 type BitPackerImpl = bitpacking::BitPacker4x;
 

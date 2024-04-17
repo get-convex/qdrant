@@ -3,8 +3,8 @@ use std::path::PathBuf;
 use std::sync::Arc;
 use std::time::Duration;
 
-use common::defaults;
 use parking_lot::Mutex;
+use qdrant_common::defaults;
 
 use super::Collection;
 use crate::operations::types::{CollectionError, CollectionResult};

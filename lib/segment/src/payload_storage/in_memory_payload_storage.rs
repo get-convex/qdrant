@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 
 use crate::common::operation_error::OperationResult;
 use crate::types::Payload;

@@ -1,9 +1,9 @@
 use std::collections::hash_map::Entry;
 use std::collections::{HashMap, HashSet};
 
-use common::types::ScoreType;
 use itertools::Itertools;
 use ordered_float::OrderedFloat;
+use qdrant_common::types::ScoreType;
 use segment::data_types::groups::GroupId;
 use segment::json_path::JsonPath;
 use segment::spaces::tools::{peek_top_largest_iterable, peek_top_smallest_iterable};

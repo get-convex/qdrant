@@ -1,8 +1,8 @@
 use std::path::Path;
 use std::sync::Arc;
 
-use common::defaults;
 use parking_lot::Mutex;
+use qdrant_common::defaults;
 use tempfile::TempPath;
 
 use super::transfer_tasks_pool::TransferTaskProgress;

@@ -13,8 +13,8 @@ use std::path::{Path, PathBuf};
 use std::sync::Arc;
 use std::time::Duration;
 
-use common::cpu::CpuBudget;
-use common::types::TelemetryDetail;
+use qdrant_common::cpu::CpuBudget;
+use qdrant_common::types::TelemetryDetail;
 use segment::common::version::StorageVersion;
 use segment::types::ShardKey;
 use semver::Version;

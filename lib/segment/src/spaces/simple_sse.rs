@@ -3,7 +3,7 @@ use std::arch::x86::*;
 #[cfg(target_arch = "x86_64")]
 use std::arch::x86_64::*;
 
-use common::types::ScoreType;
+use qdrant_common::types::ScoreType;
 
 use crate::data_types::vectors::{DenseVector, VectorElementType};
 

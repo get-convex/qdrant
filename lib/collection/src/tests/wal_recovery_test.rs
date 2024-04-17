@@ -1,7 +1,7 @@
 use std::num::NonZeroU64;
 use std::sync::Arc;
 
-use common::cpu::CpuBudget;
+use qdrant_common::cpu::CpuBudget;
 use segment::data_types::vectors::VectorStruct;
 use segment::types::{Distance, PayloadFieldSchema, PayloadSchemaType};
 use tempfile::Builder;

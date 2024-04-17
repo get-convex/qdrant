@@ -1,7 +1,7 @@
 use std::sync::atomic::{AtomicBool, Ordering};
 
 use bitvec::prelude::BitSlice;
-use common::types::{PointOffsetType, ScoreType, ScoredPointOffset};
+use qdrant_common::types::{PointOffsetType, ScoreType, ScoredPointOffset};
 use sparse::common::sparse_vector::SparseVector;
 
 use super::query::context_query::ContextQuery;

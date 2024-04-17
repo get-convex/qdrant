@@ -7,11 +7,11 @@ use std::num::NonZeroU64;
 use std::time::SystemTimeError;
 
 use api::grpc::transport_channel_pool::RequestError;
-use common::types::ScoreType;
-use common::validation::validate_range_generic;
 use io::file_operations::FileStorageError;
 use issues::IssueRecord;
 use merge::Merge;
+use qdrant_common::types::ScoreType;
+use qdrant_common::validation::validate_range_generic;
 use schemars::JsonSchema;
 use segment::common::anonymize::Anonymize;
 use segment::common::operation_error::OperationError;
@@ -1576,7 +1576,7 @@ impl Validate for VectorsConfig {
     fn validate(&self) -> Result<(), ValidationErrors> {
         match self {
             VectorsConfig::Single(single) => single.validate(),
-            VectorsConfig::Multi(multi) => common::validation::validate_iter(multi.values()),
+            VectorsConfig::Multi(multi) => qdrant_common::validation::validate_iter(multi.values()),
         }
     }
 }
@@ -1691,7 +1691,7 @@ impl VectorsConfigDiff {
 
 impl Validate for VectorsConfigDiff {
     fn validate(&self) -> Result<(), ValidationErrors> {
-        common::validation::validate_iter(self.0.values())
+        qdrant_common::validation::validate_iter(self.0.values())
     }
 }
 
@@ -1724,7 +1724,7 @@ impl SparseVectorsConfig {
 
 impl Validate for SparseVectorsConfig {
     fn validate(&self) -> Result<(), ValidationErrors> {
-        common::validation::validate_iter(self.0.values())
+        qdrant_common::validation::validate_iter(self.0.values())
     }
 }
 

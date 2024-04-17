@@ -2,7 +2,7 @@
 use std::arch::aarch64::*;
 
 #[cfg(target_feature = "neon")]
-use common::types::ScoreType;
+use qdrant_common::types::ScoreType;
 
 use crate::data_types::vectors::DenseVector;
 #[cfg(target_feature = "neon")]

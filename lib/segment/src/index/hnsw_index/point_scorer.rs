@@ -1,4 +1,4 @@
-use common::types::{PointOffsetType, ScoreType, ScoredPointOffset};
+use qdrant_common::types::{PointOffsetType, ScoreType, ScoredPointOffset};
 
 use crate::payload_storage::FilterContext;
 use crate::vector_storage::RawScorer;

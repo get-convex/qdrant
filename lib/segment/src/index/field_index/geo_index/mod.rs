@@ -5,9 +5,9 @@ use std::cmp::{max, min};
 use std::str::FromStr;
 use std::sync::Arc;
 
-use common::types::PointOffsetType;
 use itertools::Itertools;
 use parking_lot::RwLock;
+use qdrant_common::types::PointOffsetType;
 use rocksdb::DB;
 use serde_json::Value;
 

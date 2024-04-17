@@ -1,7 +1,7 @@
 use std::cmp::max;
 
-use common::types::ScoredPointOffset;
 use itertools::Itertools;
+use qdrant_common::types::ScoredPointOffset;
 use rand::prelude::StdRng;
 use rand::SeedableRng;
 

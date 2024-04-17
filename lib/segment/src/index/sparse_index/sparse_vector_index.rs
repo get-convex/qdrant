@@ -5,9 +5,9 @@ use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
 use atomic_refcell::AtomicRefCell;
-use common::cpu::CpuPermit;
-use common::types::{PointOffsetType, ScoredPointOffset, TelemetryDetail};
 use itertools::Itertools;
+use qdrant_common::cpu::CpuPermit;
+use qdrant_common::types::{PointOffsetType, ScoredPointOffset, TelemetryDetail};
 use sparse::common::scores_memory_pool::ScoresMemoryPool;
 use sparse::common::sparse_vector::SparseVector;
 use sparse::index::inverted_index::inverted_index_ram::InvertedIndexRam;

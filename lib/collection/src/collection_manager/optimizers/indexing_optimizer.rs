@@ -296,9 +296,9 @@ mod tests {
     use std::sync::atomic::AtomicBool;
     use std::sync::Arc;
 
-    use common::cpu::CpuPermit;
     use itertools::Itertools;
     use parking_lot::lock_api::RwLock;
+    use qdrant_common::cpu::CpuPermit;
     use rand::thread_rng;
     use segment::data_types::vectors::{BatchVectorStruct, DEFAULT_VECTOR_NAME};
     use segment::entry::entry_point::SegmentEntry;

@@ -1,6 +1,6 @@
 use std::num::NonZeroU32;
 
-use common::validation::validate_move_shard_different_peers;
+use qdrant_common::validation::validate_move_shard_different_peers;
 use schemars::JsonSchema;
 use segment::types::ShardKey;
 use serde::{Deserialize, Serialize};

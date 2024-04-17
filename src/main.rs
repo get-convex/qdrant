@@ -18,7 +18,7 @@ use std::thread;
 use std::thread::JoinHandle;
 use std::time::Duration;
 
-use ::common::cpu::{get_cpu_budget, CpuBudget};
+use ::qdrant_common::cpu::{get_cpu_budget, CpuBudget};
 use ::tonic::transport::Uri;
 use api::grpc::transport_channel_pool::TransportChannelPool;
 use clap::Parser;

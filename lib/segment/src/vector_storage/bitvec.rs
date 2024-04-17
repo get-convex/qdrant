@@ -1,5 +1,5 @@
 use bitvec::vec::BitVec;
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 
 /// Set deleted state in given bitvec.
 ///

@@ -1,8 +1,8 @@
 use std::cmp::max;
 use std::collections::{HashMap, HashSet};
 
-use common::fixed_length_priority_queue::FixedLengthPriorityQueue;
-use common::types::ScoreType;
+use qdrant_common::fixed_length_priority_queue::FixedLengthPriorityQueue;
+use qdrant_common::types::ScoreType;
 use segment::types::{PointIdType, ScoredPoint, SeqNumberType};
 
 pub struct SearchResultAggregator {

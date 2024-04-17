@@ -1,8 +1,8 @@
 #[cfg(not(target_os = "windows"))]
 mod prof;
 
-use common::types::PointOffsetType;
 use criterion::{criterion_group, criterion_main, Criterion};
+use qdrant_common::types::PointOffsetType;
 use rand::rngs::StdRng;
 use rand::{thread_rng, SeedableRng};
 use segment::fixtures::index_fixtures::{random_vector, FakeFilterContext, TestRawScorerProducer};

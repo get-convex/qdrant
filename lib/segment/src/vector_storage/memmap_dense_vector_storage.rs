@@ -7,8 +7,8 @@ use std::sync::Arc;
 
 use atomic_refcell::AtomicRefCell;
 use bitvec::prelude::BitSlice;
-use common::types::PointOffsetType;
 use memory::mmap_ops;
+use qdrant_common::types::PointOffsetType;
 
 use super::{DenseVectorStorage, VectorStorageEnum};
 use crate::common::operation_error::{check_process_stopped, OperationResult};
@@ -215,8 +215,8 @@ fn open_append<P: AsRef<Path>>(path: P) -> io::Result<File> {
 mod tests {
     use std::mem::transmute;
 
-    use common::types::ScoredPointOffset;
     use memory::mmap_ops::transmute_to_u8_slice;
+    use qdrant_common::types::ScoredPointOffset;
     use tempfile::Builder;
 
     use super::*;

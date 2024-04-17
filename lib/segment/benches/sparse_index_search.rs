@@ -4,9 +4,9 @@ mod prof;
 use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
-use common::cpu::CpuPermit;
-use common::types::PointOffsetType;
 use criterion::{criterion_group, criterion_main, Criterion};
+use qdrant_common::cpu::CpuPermit;
+use qdrant_common::types::PointOffsetType;
 use rand::rngs::StdRng;
 use rand::SeedableRng;
 use segment::fixtures::sparse_fixtures::fixture_sparse_index_ram;

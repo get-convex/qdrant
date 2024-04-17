@@ -17,8 +17,8 @@ use api::grpc::qdrant::{
 };
 use api::grpc::transport_channel_pool::{AddTimeout, MAX_GRPC_CHANNEL_TIMEOUT};
 use async_trait::async_trait;
-use common::types::TelemetryDetail;
 use parking_lot::Mutex;
+use qdrant_common::types::TelemetryDetail;
 use segment::common::operation_time_statistics::{
     OperationDurationsAggregator, ScopeDurationMeasurer,
 };

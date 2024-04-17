@@ -3,11 +3,11 @@ use std::ops::Deref;
 use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
-use common::types::ScoreType;
 use futures::future::try_join_all;
 use itertools::Itertools;
 use ordered_float::Float;
 use parking_lot::RwLock;
+use qdrant_common::types::ScoreType;
 use segment::common::operation_error::OperationError;
 use segment::common::BYTES_IN_KB;
 use segment::data_types::named_vectors::NamedVectors;

@@ -2,10 +2,10 @@ use std::sync::Arc;
 use std::time::{Duration, Instant};
 
 use chrono::{DateTime, SubsecRound, Utc};
-use common::types::TelemetryDetail;
 use is_sorted::IsSorted;
 use itertools::Itertools as _;
 use parking_lot::Mutex;
+use qdrant_common::types::TelemetryDetail;
 use schemars::JsonSchema;
 use serde::Serialize;
 use smallvec::SmallVec;

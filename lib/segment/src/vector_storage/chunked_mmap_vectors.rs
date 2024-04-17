@@ -3,9 +3,9 @@ use std::fs::{create_dir_all, OpenOptions};
 use std::io::Write;
 use std::path::{Path, PathBuf};
 
-use common::types::PointOffsetType;
 use memmap2::MmapMut;
 use memory::mmap_ops::{create_and_ensure_length, open_write_mmap};
+use qdrant_common::types::PointOffsetType;
 use serde::{Deserialize, Serialize};
 
 use crate::common::mmap_type::MmapType;

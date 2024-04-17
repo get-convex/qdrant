@@ -6,7 +6,7 @@ impl Validate for VectorStruct {
     fn validate(&self) -> Result<(), validator::ValidationErrors> {
         match self {
             VectorStruct::Single(_) => Ok(()),
-            VectorStruct::Multi(v) => common::validation::validate_iter(v.values()),
+            VectorStruct::Multi(v) => qdrant_common::validation::validate_iter(v.values()),
         }
     }
 }
@@ -16,7 +16,7 @@ impl Validate for BatchVectorStruct {
         match self {
             BatchVectorStruct::Single(_) => Ok(()),
             BatchVectorStruct::Multi(v) => {
-                common::validation::validate_iter(v.values().flat_map(|batch| batch.iter()))
+                qdrant_common::validation::validate_iter(v.values().flat_map(|batch| batch.iter()))
             }
         }
     }

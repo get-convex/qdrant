@@ -1,11 +1,11 @@
 use std::cmp::max;
 use std::path::{Path, PathBuf};
 
-use common::fixed_length_priority_queue::FixedLengthPriorityQueue;
-use common::types::{PointOffsetType, ScoredPointOffset};
 use io::file_operations::{atomic_save_bin, read_bin, FileStorageError};
 use itertools::Itertools;
 use memory::mmap_ops;
+use qdrant_common::fixed_length_priority_queue::FixedLengthPriorityQueue;
+use qdrant_common::types::{PointOffsetType, ScoredPointOffset};
 use serde::{Deserialize, Serialize};
 
 use super::entry_points::EntryPoint;

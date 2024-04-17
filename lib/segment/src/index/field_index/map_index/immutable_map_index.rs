@@ -6,8 +6,8 @@ use std::ops::Range;
 use std::str::FromStr;
 use std::sync::Arc;
 
-use common::types::PointOffsetType;
 use parking_lot::RwLock;
+use qdrant_common::types::PointOffsetType;
 use rocksdb::DB;
 
 use super::mutable_map_index::MutableMapIndex;

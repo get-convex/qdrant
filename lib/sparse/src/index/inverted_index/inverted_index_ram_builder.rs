@@ -1,6 +1,6 @@
 use std::cmp::max;
 
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 
 use crate::common::sparse_vector::SparseVector;
 use crate::index::inverted_index::inverted_index_ram::InvertedIndexRam;

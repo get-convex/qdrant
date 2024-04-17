@@ -111,7 +111,7 @@ mod tests {
     use std::thread;
     use std::time::{Duration, Instant};
 
-    use common::panic;
+    use qdrant_common::panic;
     use tokio::time::sleep;
 
     use super::*;

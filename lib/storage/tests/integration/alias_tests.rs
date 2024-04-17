@@ -4,8 +4,8 @@ use std::sync::Arc;
 use collection::operations::types::VectorParams;
 use collection::optimizers_builder::OptimizersConfig;
 use collection::shards::channel_service::ChannelService;
-use common::cpu::CpuBudget;
 use memory::madvise;
+use qdrant_common::cpu::CpuBudget;
 use segment::types::Distance;
 use storage::content_manager::collection_meta_ops::{
     ChangeAliasesOperation, CollectionMetaOperations, CreateAlias, CreateCollection,

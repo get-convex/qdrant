@@ -1,6 +1,6 @@
 use std::{error, result};
 
-use common::types::{PointOffsetType, ScoredPointOffset};
+use qdrant_common::types::{PointOffsetType, ScoredPointOffset};
 use rand::seq::IteratorRandom;
 
 use crate::data_types::vectors::VectorElementType;

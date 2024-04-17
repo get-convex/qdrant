@@ -1,4 +1,4 @@
-use common::types::{PointOffsetType, ScoreType};
+use qdrant_common::types::{PointOffsetType, ScoreType};
 use sparse::common::sparse_vector::SparseVector;
 
 use crate::vector_storage::query::{Query, TransformInto};

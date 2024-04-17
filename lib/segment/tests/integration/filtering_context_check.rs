@@ -1,5 +1,5 @@
-use common::types::PointOffsetType;
 use itertools::Itertools;
+use qdrant_common::types::PointOffsetType;
 use rand::prelude::StdRng;
 use rand::SeedableRng;
 use segment::fixtures::payload_context_fixture::{

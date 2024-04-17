@@ -2,7 +2,7 @@ use std::path::PathBuf;
 use std::process::Command;
 use std::{env, str};
 
-use common::defaults;
+use qdrant_common::defaults;
 use tonic_build::Builder;
 
 fn main() -> std::io::Result<()> {
@@ -116,7 +116,7 @@ fn configure_validation(builder: Builder) -> Builder {
         .validates(&[
             ("GetCollectionInfoRequest.collection_name", "length(min = 1, max = 255)"),
             ("CollectionExistsRequest.collection_name", "length(min = 1, max = 255)"),
-            ("CreateCollection.collection_name", "length(min = 1, max = 255), custom = \"common::validation::validate_collection_name\""),
+            ("CreateCollection.collection_name", "length(min = 1, max = 255), custom = \"qdrant_common::validation::validate_collection_name\""),
             ("CreateCollection.hnsw_config", ""),
             ("CreateCollection.wal_config", ""),
             ("CreateCollection.optimizers_config", ""),
@@ -295,7 +295,7 @@ fn configure_validation(builder: Builder) -> Builder {
         ], &[])
         // Service: raft_service.proto
         .validates(&[
-            ("AddPeerToKnownMessage.uri", "custom = \"common::validation::validate_not_empty\""),
+            ("AddPeerToKnownMessage.uri", "custom = \"qdrant_common::validation::validate_not_empty\""),
             ("AddPeerToKnownMessage.port", "custom = \"crate::grpc::validate::validate_u32_range_min_1\""),
         ], &[])
         // Service: snapshot_service.proto
@@ -311,7 +311,7 @@ fn configure_validation(builder: Builder) -> Builder {
             ("DeleteShardSnapshotRequest.snapshot_name", "length(min = 1)"),
             ("RecoverShardSnapshotRequest.collection_name", "length(min = 1, max = 255)"),
             ("RecoverShardSnapshotRequest.snapshot_name", "length(min = 1)"),
-            ("RecoverShardSnapshotRequest.checksum", "custom = \"common::validation::validate_sha256_hash_option\""),
+            ("RecoverShardSnapshotRequest.checksum", "custom = \"qdrant_common::validation::validate_sha256_hash_option\""),
             ("SnapshotDescription.creation_time", "custom = \"crate::grpc::validate::validate_timestamp\""),
         ], &[
             "CreateFullSnapshotRequest",

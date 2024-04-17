@@ -3,8 +3,8 @@ use std::sync::atomic::{AtomicBool, Ordering};
 use std::sync::Arc;
 use std::time::{Duration, Instant};
 
-use common::cpu::CpuPermit;
 use itertools::Itertools;
+use qdrant_common::cpu::CpuPermit;
 use segment::common::operation_error::OperationError;
 use segment::data_types::vectors::{only_default_vector, DEFAULT_VECTOR_NAME};
 use segment::entry::entry_point::SegmentEntry;

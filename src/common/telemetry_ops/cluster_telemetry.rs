@@ -1,5 +1,5 @@
 use collection::shards::shard::PeerId;
-use common::types::{DetailsLevel, TelemetryDetail};
+use qdrant_common::types::{DetailsLevel, TelemetryDetail};
 use schemars::JsonSchema;
 use segment::common::anonymize::Anonymize;
 use serde::Serialize;

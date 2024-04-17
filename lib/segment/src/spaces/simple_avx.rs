@@ -1,6 +1,6 @@
 use std::arch::x86_64::*;
 
-use common::types::ScoreType;
+use qdrant_common::types::ScoreType;
 
 use crate::data_types::vectors::{DenseVector, VectorElementType};
 

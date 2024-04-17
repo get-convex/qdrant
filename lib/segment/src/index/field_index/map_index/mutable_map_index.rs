@@ -5,8 +5,8 @@ use std::iter;
 use std::str::FromStr;
 use std::sync::Arc;
 
-use common::types::PointOffsetType;
 use parking_lot::RwLock;
+use qdrant_common::types::PointOffsetType;
 use rocksdb::DB;
 
 use super::MapIndex;

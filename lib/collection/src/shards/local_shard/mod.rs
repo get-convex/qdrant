@@ -11,12 +11,12 @@ use std::thread;
 use std::time::{Duration, Instant};
 
 use arc_swap::ArcSwap;
-use common::cpu::CpuBudget;
-use common::panic;
-use common::types::TelemetryDetail;
 use indicatif::{ProgressBar, ProgressStyle};
 use itertools::Itertools;
 use parking_lot::{Mutex as ParkingMutex, RwLock};
+use qdrant_common::cpu::CpuBudget;
+use qdrant_common::panic;
+use qdrant_common::types::TelemetryDetail;
 use segment::data_types::vectors::VectorElementType;
 use segment::entry::entry_point::SegmentEntry as _;
 use segment::index::field_index::CardinalityEstimation;

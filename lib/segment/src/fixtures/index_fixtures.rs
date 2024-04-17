@@ -4,7 +4,7 @@ use std::path::PathBuf;
 use std::sync::atomic::AtomicBool;
 
 use bitvec::prelude::{BitSlice, BitVec};
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 use rand::Rng;
 
 use crate::common::operation_error::OperationResult;

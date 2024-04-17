@@ -2,8 +2,8 @@ use std::cmp::max;
 use std::collections::{BTreeMap, HashSet};
 use std::sync::Arc;
 
-use common::types::PointOffsetType;
 use parking_lot::RwLock;
+use qdrant_common::types::PointOffsetType;
 use rocksdb::DB;
 
 use super::GeoMapIndex;

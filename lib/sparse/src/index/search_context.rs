@@ -2,8 +2,8 @@ use std::cmp::{max, min, Ordering};
 use std::sync::atomic::AtomicBool;
 use std::sync::atomic::Ordering::Relaxed;
 
-use common::fixed_length_priority_queue::FixedLengthPriorityQueue;
-use common::types::{PointOffsetType, ScoredPointOffset};
+use qdrant_common::fixed_length_priority_queue::FixedLengthPriorityQueue;
+use qdrant_common::types::{PointOffsetType, ScoredPointOffset};
 
 use crate::common::scores_memory_pool::PooledScoresHandle;
 use crate::common::sparse_vector::SparseVector;

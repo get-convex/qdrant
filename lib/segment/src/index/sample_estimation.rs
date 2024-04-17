@@ -1,6 +1,6 @@
 use std::cmp::{max, min};
 
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 
 const MAX_ESTIMATED_POINTS: usize = 1000;
 

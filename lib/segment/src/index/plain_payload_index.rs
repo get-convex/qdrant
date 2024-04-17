@@ -5,9 +5,9 @@ use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
 use atomic_refcell::AtomicRefCell;
-use common::cpu::CpuPermit;
-use common::types::{PointOffsetType, ScoredPointOffset, TelemetryDetail};
 use parking_lot::Mutex;
+use qdrant_common::cpu::CpuPermit;
+use qdrant_common::types::{PointOffsetType, ScoredPointOffset, TelemetryDetail};
 use schemars::_serde_json::Value;
 
 use crate::common::operation_error::OperationResult;

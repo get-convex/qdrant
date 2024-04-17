@@ -3,7 +3,7 @@ mod test_graph_connectivity;
 
 use std::path::Path;
 
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 use rand::Rng;
 
 use super::graph_links::GraphLinksRam;

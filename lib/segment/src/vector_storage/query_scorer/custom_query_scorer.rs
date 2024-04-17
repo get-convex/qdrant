@@ -1,6 +1,6 @@
 use std::marker::PhantomData;
 
-use common::types::{PointOffsetType, ScoreType};
+use qdrant_common::types::{PointOffsetType, ScoreType};
 
 use crate::data_types::vectors::{DenseVector, VectorElementType};
 use crate::spaces::metric::Metric;

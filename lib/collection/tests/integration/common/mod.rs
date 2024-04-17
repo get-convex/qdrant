@@ -12,7 +12,7 @@ use collection::shards::channel_service::ChannelService;
 use collection::shards::collection_shard_distribution::CollectionShardDistribution;
 use collection::shards::replica_set::{AbortShardTransfer, ChangePeerState, ReplicaState};
 use collection::shards::CollectionId;
-use common::cpu::CpuBudget;
+use qdrant_common::cpu::CpuBudget;
 use segment::types::Distance;
 
 /// Test collections for this upper bound of shards.

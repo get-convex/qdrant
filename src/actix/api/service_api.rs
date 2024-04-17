@@ -6,7 +6,7 @@ use actix_web::rt::time::Instant;
 use actix_web::web::Query;
 use actix_web::{get, post, web, HttpResponse, Responder};
 use actix_web_validator::Json;
-use common::types::{DetailsLevel, TelemetryDetail};
+use qdrant_common::types::{DetailsLevel, TelemetryDetail};
 use schemars::JsonSchema;
 use segment::common::anonymize::Anonymize;
 use serde::{Deserialize, Serialize};

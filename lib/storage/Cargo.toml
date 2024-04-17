@@ -41,7 +41,7 @@ prost = { workspace = true } # version of prost used by raft
 protobuf = "2.28.0" # version of protobuf used by raft
 serde_cbor = { workspace = true }
 
-common = { path = "../common/common" }
+qdrant_common = { path = "../common/common" }
 cancel = { path = "../common/cancel" }
 io = { path = "../common/io" }
 memory = { path = "../common/memory" }

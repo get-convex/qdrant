@@ -1,6 +1,6 @@
 use std::cmp::Reverse;
 
-use common::fixed_length_priority_queue::FixedLengthPriorityQueue;
+use qdrant_common::fixed_length_priority_queue::FixedLengthPriorityQueue;
 
 pub fn peek_top_smallest_iterable<I, E: Ord>(elements: I, top: usize) -> Vec<E>
 where

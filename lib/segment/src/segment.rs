@@ -7,11 +7,11 @@ use std::sync::Arc;
 use std::thread::{self, JoinHandle};
 
 use atomic_refcell::AtomicRefCell;
-use common::types::{PointOffsetType, ScoredPointOffset, TelemetryDetail};
 use io::file_operations::{atomic_save_json, read_json};
 use itertools::Either;
 use memory::mmap_ops;
 use parking_lot::{Mutex, RwLock};
+use qdrant_common::types::{PointOffsetType, ScoredPointOffset, TelemetryDetail};
 use rocksdb::DB;
 use sparse::common::sparse_vector::SparseVector;
 use tar::Builder;

@@ -6,13 +6,13 @@ use std::sync::Arc;
 use std::thread;
 
 use atomic_refcell::AtomicRefCell;
-#[cfg(target_os = "linux")]
-use common::cpu::linux_low_thread_priority;
-use common::cpu::CpuPermit;
-use common::types::{PointOffsetType, ScoredPointOffset, TelemetryDetail};
 use log::debug;
 use memory::mmap_ops;
 use parking_lot::Mutex;
+#[cfg(target_os = "linux")]
+use qdrant_common::cpu::linux_low_thread_priority;
+use qdrant_common::cpu::CpuPermit;
+use qdrant_common::types::{PointOffsetType, ScoredPointOffset, TelemetryDetail};
 use rand::thread_rng;
 use rayon::prelude::*;
 use rayon::ThreadPool;

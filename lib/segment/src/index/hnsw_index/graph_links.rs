@@ -5,9 +5,9 @@ use std::ops::Range;
 use std::path::{Path, PathBuf};
 use std::sync::Arc;
 
-use common::types::PointOffsetType;
 use memmap2::{Mmap, MmapMut};
 use memory::{madvise, mmap_ops};
+use qdrant_common::types::PointOffsetType;
 
 use crate::common::operation_error::{OperationError, OperationResult};
 use crate::common::vector_utils::TrySetCapacityExact;

@@ -4,9 +4,9 @@ use std::path::Path;
 use std::sync::atomic::AtomicUsize;
 
 use bitvec::prelude::BitVec;
-use common::fixed_length_priority_queue::FixedLengthPriorityQueue;
-use common::types::{PointOffsetType, ScoreType, ScoredPointOffset};
 use parking_lot::{Mutex, MutexGuard, RwLock};
+use qdrant_common::fixed_length_priority_queue::FixedLengthPriorityQueue;
+use qdrant_common::types::{PointOffsetType, ScoreType, ScoredPointOffset};
 use rand::distributions::Uniform;
 use rand::Rng;
 

@@ -3,10 +3,10 @@ use std::path::Path;
 use std::sync::Arc;
 
 use atomic_refcell::AtomicRefCell;
-use common::types::PointOffsetType;
 use fnv::FnvBuildHasher;
 use indexmap::IndexSet;
 use itertools::Itertools;
+use qdrant_common::types::PointOffsetType;
 use rand::prelude::StdRng;
 use rand::{Rng, SeedableRng};
 use segment::data_types::integer_index::{IntegerIndexParams, IntegerIndexType};

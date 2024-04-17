@@ -483,12 +483,12 @@ name = "api"
 version = "1.8.4"
 dependencies = [
  "chrono",
- "common",
  "log",
  "parking_lot",
  "prost 0.11.9",
  "prost-build 0.11.9",
  "prost-wkt-types",
+ "qdrant_common",
  "rand 0.8.5",
  "schemars",
  "segment",
@@ -1068,7 +1068,6 @@ dependencies = [
  "bytes",
  "cancel",
  "chrono",
- "common",
  "criterion",
  "env_logger 0.11.3",
  "fnv",
@@ -1086,6 +1085,7 @@ dependencies = [
  "parking_lot",
  "pprof",
  "proptest",
+ "qdrant_common",
  "rand 0.8.5",
  "ringbuffer",
  "rmp-serde",
@@ -1126,21 +1126,6 @@ checksum = "cbf2150cce219b664a8a70df7a1f933836724b503f8a413af9365b4dcc4d90b8"
 dependencies = [
  "lazy_static",
  "windows-sys 0.48.0",
-]
-
-[[package]]
-name = "common"
-version = "0.0.0"
-dependencies = [
- "lazy_static",
- "num_cpus",
- "ordered-float 4.2.0",
- "semver",
- "serde",
- "thiserror",
- "thread-priority",
- "tokio",
- "validator",
 ]
 
 [[package]]
@@ -3954,7 +3939,6 @@ dependencies = [
  "clap",
  "collection",
  "colored",
- "common",
  "config",
  "console-subscriber",
  "constant_time_eq 0.3.0",
@@ -3967,6 +3951,7 @@ dependencies = [
  "parking_lot",
  "prometheus",
  "prost 0.11.9",
+ "qdrant_common",
  "raft",
  "raft-proto",
  "rand 0.8.5",
@@ -4004,6 +3989,21 @@ dependencies = [
  "uuid",
  "validator",
  "wal",
+]
+
+[[package]]
+name = "qdrant_common"
+version = "0.0.0"
+dependencies = [
+ "lazy_static",
+ "num_cpus",
+ "ordered-float 4.2.0",
+ "semver",
+ "serde",
+ "thiserror",
+ "thread-priority",
+ "tokio",
+ "validator",
 ]
 
 [[package]]
@@ -4709,7 +4709,6 @@ dependencies = [
  "cgroups-rs",
  "charabia",
  "chrono",
- "common",
  "criterion",
  "fnv",
  "fs_extra",
@@ -4734,6 +4733,7 @@ dependencies = [
  "pprof",
  "procfs",
  "proptest",
+ "qdrant_common",
  "quantization",
  "rand 0.8.5",
  "rand_distr",
@@ -5047,13 +5047,13 @@ dependencies = [
 name = "sparse"
 version = "0.1.0"
 dependencies = [
- "common",
  "io",
  "itertools 0.12.1",
  "memmap2",
  "memory",
  "ordered-float 4.2.0",
  "parking_lot",
+ "qdrant_common",
  "rand 0.8.5",
  "schemars",
  "serde",
@@ -5084,7 +5084,6 @@ dependencies = [
  "cancel",
  "chrono",
  "collection",
- "common",
  "env_logger 0.11.3",
  "futures",
  "http 0.2.12",
@@ -5096,6 +5095,7 @@ dependencies = [
  "proptest",
  "prost 0.11.9",
  "protobuf",
+ "qdrant_common",
  "raft",
  "rand 0.8.5",
  "rbac",

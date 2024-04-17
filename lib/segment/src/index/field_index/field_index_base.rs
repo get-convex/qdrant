@@ -1,6 +1,6 @@
 use std::fmt::Formatter;
 
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 use serde_json::Value;
 use smol_str::SmolStr;
 

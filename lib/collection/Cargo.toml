@@ -49,7 +49,7 @@ url = { version = "2", features = ["serde"] }
 validator = { version = "0.16", features = ["derive"] }
 actix-web-validator = "5.0.1"
 
-common = { path = "../common/common" }
+qdrant_common = { path = "../common/common" }
 cancel = { path = "../common/cancel" }
 io = { path = "../common/io" }
 issues = { path = "../common/issues" }

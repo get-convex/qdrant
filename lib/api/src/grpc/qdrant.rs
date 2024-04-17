@@ -432,7 +432,7 @@ pub struct CreateCollection {
     #[prost(string, tag = "1")]
     #[validate(
         length(min = 1, max = 255),
-        custom = "common::validation::validate_collection_name"
+        custom = "qdrant_common::validation::validate_collection_name"
     )]
     pub collection_name: ::prost::alloc::string::String,
     /// Configuration of vector index
@@ -9854,7 +9854,7 @@ pub struct Peer {
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct AddPeerToKnownMessage {
     #[prost(string, optional, tag = "1")]
-    #[validate(custom = "common::validation::validate_not_empty")]
+    #[validate(custom = "qdrant_common::validation::validate_not_empty")]
     pub uri: ::core::option::Option<::prost::alloc::string::String>,
     #[prost(uint32, optional, tag = "2")]
     #[validate(custom = "crate::grpc::validate::validate_u32_range_min_1")]
@@ -11250,7 +11250,7 @@ pub struct RecoverShardSnapshotRequest {
     pub snapshot_priority: i32,
     /// SHA256 checksum for verifying snapshot integrity
     #[prost(string, optional, tag = "5")]
-    #[validate(custom = "common::validation::validate_sha256_hash_option")]
+    #[validate(custom = "qdrant_common::validation::validate_sha256_hash_option")]
     pub checksum: ::core::option::Option<::prost::alloc::string::String>,
 }
 #[derive(serde::Serialize)]

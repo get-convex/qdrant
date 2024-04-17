@@ -1,4 +1,4 @@
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 
 pub type ConditionCheckerFn<'a> = Box<dyn Fn(PointOffsetType) -> bool + 'a>;
 

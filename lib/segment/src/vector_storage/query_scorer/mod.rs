@@ -1,4 +1,4 @@
-use common::types::{PointOffsetType, ScoreType};
+use qdrant_common::types::{PointOffsetType, ScoreType};
 
 pub mod custom_query_scorer;
 pub mod metric_query_scorer;

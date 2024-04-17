@@ -2,8 +2,8 @@ use std::collections::{HashMap, HashSet};
 use std::path::{Path, PathBuf};
 use std::sync::Arc;
 
-use common::cpu::CpuBudget;
 use itertools::Itertools;
+use qdrant_common::cpu::CpuBudget;
 // TODO rename ReplicaShard to ReplicaSetShard
 use segment::types::ShardKey;
 use tar::Builder as TarBuilder;

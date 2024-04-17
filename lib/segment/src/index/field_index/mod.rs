@@ -1,6 +1,6 @@
 use std::collections::HashSet;
 
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 
 use crate::types::{FieldCondition, IsEmptyCondition, IsNullCondition};
 

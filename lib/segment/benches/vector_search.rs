@@ -3,8 +3,8 @@ use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
 use atomic_refcell::AtomicRefCell;
-use common::types::PointOffsetType;
 use criterion::{criterion_group, criterion_main, Criterion};
+use qdrant_common::types::PointOffsetType;
 use rand::distributions::Standard;
 use rand::Rng;
 use segment::common::rocksdb_wrapper::{open_db, DB_VECTOR_CF};

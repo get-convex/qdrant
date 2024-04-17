@@ -4,7 +4,7 @@ use std::ops::Deref;
 use std::sync::Arc;
 
 use atomic_refcell::AtomicRefCell;
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 
 use crate::common::utils::{check_is_empty, check_is_null, IndexesMap};
 use crate::id_tracker::IdTrackerSS;

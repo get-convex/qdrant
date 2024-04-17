@@ -1,7 +1,7 @@
 use std::cmp::{max, min};
 use std::hash::{Hash, Hasher};
 
-use common::types::{PointOffsetType, ScoreType};
+use qdrant_common::types::{PointOffsetType, ScoreType};
 use seahash::SeaHasher;
 
 #[derive(Hash, Eq, PartialEq, Clone, Debug)]

@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
-use common::types::TelemetryDetail;
 use parking_lot::Mutex;
+use qdrant_common::types::TelemetryDetail;
 use schemars::JsonSchema;
 use segment::common::anonymize::Anonymize;
 use serde::Serialize;

@@ -1,6 +1,6 @@
 use std::ops::Range;
 
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 
 // Flatten points-to-values map
 // It's an analogue of `Vec<Vec<N>>` but more RAM efficient because it stores values in a single Vec.

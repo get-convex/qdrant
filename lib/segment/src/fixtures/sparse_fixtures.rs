@@ -3,8 +3,8 @@ use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
 use atomic_refcell::AtomicRefCell;
-use common::cpu::CpuPermit;
-use common::types::PointOffsetType;
+use qdrant_common::cpu::CpuPermit;
+use qdrant_common::types::PointOffsetType;
 use rand::Rng;
 use sparse::common::sparse_vector::SparseVector;
 use sparse::common::sparse_vector_fixture::random_sparse_vector;

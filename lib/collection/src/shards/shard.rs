@@ -2,7 +2,7 @@ use core::marker::{Send, Sync};
 use std::future::{self, Future};
 use std::path::Path;
 
-use common::types::TelemetryDetail;
+use qdrant_common::types::TelemetryDetail;
 
 use super::local_shard::clock_map::RecoveryPoint;
 use super::update_tracker::UpdateTracker;

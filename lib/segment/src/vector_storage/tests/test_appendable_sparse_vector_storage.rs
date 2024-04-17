@@ -2,7 +2,7 @@ use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
 use atomic_refcell::AtomicRefCell;
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 use sparse::common::sparse_vector::SparseVector;
 use tempfile::Builder;
 

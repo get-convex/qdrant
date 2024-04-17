@@ -4,8 +4,8 @@ use std::path::{Path, PathBuf};
 use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
-use common::types::TelemetryDetail;
 use parking_lot::{RwLock, RwLockUpgradableReadGuard};
+use qdrant_common::types::TelemetryDetail;
 use segment::common::operation_error::{OperationResult, SegmentFailedState};
 use segment::data_types::named_vectors::NamedVectors;
 use segment::data_types::order_by::OrderingValue;

@@ -4,8 +4,8 @@ use std::path::Path;
 use std::sync::atomic::AtomicBool;
 use std::sync::Arc;
 
-use common::cpu::CpuPermit;
 use parking_lot::RwLock;
+use qdrant_common::cpu::CpuPermit;
 use rand::rngs::ThreadRng;
 use rand::Rng;
 use segment::data_types::named_vectors::NamedVectors;

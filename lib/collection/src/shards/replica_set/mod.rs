@@ -12,8 +12,8 @@ use std::path::{Path, PathBuf};
 use std::sync::Arc;
 use std::time::Duration;
 
-use common::cpu::CpuBudget;
-use common::types::TelemetryDetail;
+use qdrant_common::cpu::CpuBudget;
+use qdrant_common::types::TelemetryDetail;
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 use tokio::runtime::Handle;

@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
-use common::types::PointOffsetType;
 use parking_lot::RwLock;
+use qdrant_common::types::PointOffsetType;
 use rocksdb::DB;
 
 use self::memory::{BinaryItem, BinaryMemory};
@@ -13,7 +13,7 @@ use crate::types::{FieldCondition, Match, MatchValue, PayloadKeyType, ValueVaria
 
 mod memory {
     use bitvec::vec::BitVec;
-    use common::types::PointOffsetType;
+    use qdrant_common::types::PointOffsetType;
 
     pub struct BinaryItem {
         value: u8,

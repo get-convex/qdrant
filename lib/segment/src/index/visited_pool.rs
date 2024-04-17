@@ -1,8 +1,8 @@
 //! Structures for fast and tread-safe way to check if some points were visited or not
 
-use common::defaults::POOL_KEEP_LIMIT;
-use common::types::PointOffsetType;
 use parking_lot::RwLock;
+use qdrant_common::defaults::POOL_KEEP_LIMIT;
+use qdrant_common::types::PointOffsetType;
 
 /// Visited list handle is an owner of the `VisitedList`, which is returned by `VisitedPool` and returned back to it
 #[derive(Debug)]

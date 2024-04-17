@@ -1,7 +1,7 @@
 use std::cmp::max;
 
-use common::types::PointOffsetType;
 use ordered_float::OrderedFloat;
+use qdrant_common::types::PointOffsetType;
 
 use crate::common::types::DimWeight;
 

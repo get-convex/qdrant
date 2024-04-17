@@ -158,8 +158,8 @@ mod tests {
     use std::sync::atomic::AtomicBool;
     use std::sync::Arc;
 
-    use common::cpu::CpuPermit;
     use parking_lot::RwLock;
+    use qdrant_common::cpu::CpuPermit;
     use segment::index::hnsw_index::num_rayon_threads;
     use tempfile::Builder;
 

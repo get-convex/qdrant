@@ -1,4 +1,4 @@
-use common::types::PointOffsetType;
+use qdrant_common::types::PointOffsetType;
 
 use crate::common::utils::IndexesMap;
 use crate::id_tracker::IdTrackerSS;

@@ -73,7 +73,7 @@ pub struct SnapshotRecover {
 
     /// Optional SHA256 checksum to verify snapshot integrity before recovery.
     #[serde(default)]
-    #[validate(custom = "common::validation::validate_sha256_hash")]
+    #[validate(custom = "qdrant_common::validation::validate_sha256_hash")]
     pub checksum: Option<String>,
 }
 
@@ -157,7 +157,7 @@ pub struct ShardSnapshotRecover {
     pub priority: Option<SnapshotPriority>,
 
     /// Optional SHA256 checksum to verify snapshot integrity before recovery.
-    #[validate(custom = "common::validation::validate_sha256_hash")]
+    #[validate(custom = "qdrant_common::validation::validate_sha256_hash")]
     #[serde(default)]
     pub checksum: Option<String>,
 }
