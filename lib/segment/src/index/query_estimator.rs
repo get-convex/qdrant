@@ -113,7 +113,7 @@ pub fn combine_should_estimations(
     }
     let element_not_hit_prob: f64 = estimations
         .iter()
-        .map(|x| (total - x.exp) as f64 / (total as f64))
+        .map(|x| (total.saturating_sub(x.exp)) as f64 / (total as f64))
         .product();
     let element_hit_prob = 1.0 - element_not_hit_prob;
     let expected_count = (element_hit_prob * (total as f64)).round() as usize;
