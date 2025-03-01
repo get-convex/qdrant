@@ -45,9 +45,9 @@ async-trait = "0.1.78"
 arc-swap = "1.7.0"
 tonic = { workspace = true }
 uuid = { workspace = true }
-url = { version = "2", features = ["serde"] }
-validator = { version = "0.16", features = ["derive"] }
-actix-web-validator = "5.0.1"
+url = { version = "^2.5.4", features = ["serde"] }
+validator = { version = "0.20", features = ["derive"] }
+actix-web-validator = "6"
 
 qdrant_common = { path = "../common/common" }
 cancel = { path = "../common/cancel" }
