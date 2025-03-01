@@ -70,7 +70,7 @@ actix-cors = "0.7.0"
 actix-files = "0.6.5"
 actix-web = { version = "4.5.1", optional = true, features = ["rustls-0_22", "actix-tls"] }
 actix-web-httpauth = "0.8.1"
-actix-web-validator = "5.0.1"
+actix-web-validator = "6"
 tonic = { workspace = true }
 tonic-reflection = { workspace = true }
 tower = { version = "0.4.13", features = ["filter"] }
@@ -81,7 +81,7 @@ rustls = "0.22.2"
 rustls-pki-types = "1.3.1"
 rustls-pemfile = "2.1.1"
 prometheus = { version = "0.13.3", default-features = false }
-validator = { version = "0.16", features = ["derive"] }
+validator = { version = "0.20", features = ["derive"] }
 
 # Consensus related crates
 raft = { version = "0.7.0", features = ["prost-codec"], default-features = false }
